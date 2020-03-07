@@ -10,13 +10,17 @@
 		return $data;
 	}
 	function initial_array(){
-		$cars[0][0] = array(Year=>2014,Make=>Jeep,Model=>Grand-Cherokee,Price=>48314,KM=>70000,Color=>BLACK,Image=>Jeep.jpg);
-		$cars[0][1] = array(Year=>2016,Make=>BWM,Model=>X5-M,Price=>126000,KM=>90,Color=>White,Image=>BMW.jpg);
-		$cars[0][2] = array(Year=>2016,Make=>BWM,Model=>X5-M,Price=>126000,KM=>90,Color=>White,Image=>BMW.jpg);
-		$cars[0][3] = array(Year=>2016,Make=>BWM,Model=>X5-M,Price=>126000,KM=>90,Color=>White,Image=>BMW.jpg);
-		$cars[0][4] = array(Year=>2016,Make=>BWM,Model=>X5-M,Price=>126000,KM=>90,Color=>White,Image=>BMW.jpg);
-		2015 , Acura , MDX           , 60876  ,50000   , BLACK , ACURA.jpg
-		2016 , Honda , Pilot         , 46320  ,60      , Silver, Honda.jpg
-		2015 , Audi  , Q3            , 30988  ,40000   , BLACK , Audi.jpg
+		$cars = array(
+		array("Year"=>2014,"Make"=>"Jeep","Model"=>"Grand-Cherokee","Price"=>48314,"KM"=>70000,"Color"=>"BLACK","Image"=>"Jeep.jpg"),
+		array("Year"=>2016,"Make"=>"BWM","Model"=>"X5-M","Price"=>48314,"KM"=>70000,"Color"=>"White","Image"=>"BMW.jpg"),
+		array("Year"=>2015,"Make"=>"Acura","Model"=>"MDX","Price"=>60876,"KM"=>50000,"Color"=>"BLACK","Image"=>"ACURA.jpg"),
+		array("Year"=>2016,"Make"=>"Honda","Model"=>"Pilot","Price"=>46320,"KM"=>60,"Color"=>"Silver","Image"=>"Honda.jpg"),
+		array("Year"=>2015,"Make"=>"Audi","Model"=>"Q3","Price"=>30988,"KM"=>40000,"Color"=>"BLACK","Image"=>"Audi.jpg")
+		);
+		return $cars;
+	}
+	function init2(){
+		$age = array("Peter"=>"35", "Joe"=>"43");    // OR  $age['Peter'] = "35";  $age['Joe'] = "43";
+		return $age;
 	}
 ?>

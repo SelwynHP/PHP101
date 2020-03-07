@@ -12,8 +12,18 @@
 						<strong><br /><br />
 							</strong><br /><br />
 							<?php include('data_display.php')?>
+							<?php
+								if(isset($_POST['submit'])){
+									$cars = initial_array();
+									$lenght = count($cars);
+									for($i = 0; $i < $lenght; $i++){
+										echo implode(", " ,$cars[$i]);
+										echo "<br/>";
+									}
+								}
+							?>
 							<form  action="#" method="POST">
-								
+								<input type="submit" name="submit" value="Submit">
 							</form>
 						<br />
 					</div>
