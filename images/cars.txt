@@ -1,0 +1,7 @@
+Year   Make   Model            Price   KM        Color   Image
+2014 , Jeep  , Grand-Cherokee, 48314  ,70000   , BLACK , Jeep.jpg
+2016 , BMW   , X5-M          , 126000 ,90      , White , BMW.jpg
+2015 , Acura , MDX           , 60876  ,50000   , BLACK , ACURA.jpg
+2016 , Honda , Pilot         , 46320  ,60      , Silver, Honda.jpg
+2015 , Audi  , Q3            , 30988  ,40000   , BLACK , Audi.jpg
+2020 , Mazda , Speed3        , 46000  ,6       , Pink  , Mazda.jpg

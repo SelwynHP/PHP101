@@ -14,10 +14,17 @@
 							<?php include('data_display.php')?>
 							<?php
 								if(isset($_POST['submit'])){
-									$cars = initial_array();
+									$cars = array_man_init();
 									$lenght = count($cars);
-									for($i = 0; $i < $lenght; $i++){
+									/*for($i = 0; $i < $lenght; $i++){
 										echo implode(", " ,$cars[$i]);
+										echo "<br/>";
+									}*/
+
+									$main = array_auto_init();
+									$mainCount = count($main);
+									for($i = 0; $i < $mainCount; $i++){
+										echo implode(" ",$main[$i]);
 										echo "<br/>";
 									}
 								}

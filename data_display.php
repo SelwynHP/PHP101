@@ -9,7 +9,7 @@
 		$data = htmlspecialchars($data);
 		return $data;
 	}
-	function initial_array(){
+	function array_man_init(){
 		$cars = array(
 		array("Year"=>2014,"Make"=>"Jeep","Model"=>"Grand-Cherokee","Price"=>48314,"KM"=>70000,"Color"=>"BLACK","Image"=>"Jeep.jpg"),
 		array("Year"=>2016,"Make"=>"BWM","Model"=>"X5-M","Price"=>48314,"KM"=>70000,"Color"=>"White","Image"=>"BMW.jpg"),
@@ -19,8 +19,34 @@
 		);
 		return $cars;
 	}
-	function init2(){
-		$age = array("Peter"=>"35", "Joe"=>"43");    // OR  $age['Peter'] = "35";  $age['Joe'] = "43";
-		return $age;
+	function array_auto_init(){
+		$array = array();
+		$filePath = "C:/xampp/htdocs/Test/images/cars.txt"; //Windows Version
+		//$filePath = "/opt/lampp/htdocs/Test/images/cars.txt"; //Linux Version
+
+		//==============Parsing File==============
+		$file = fopen($filePath,"r");
+		while(! feof($file)){
+			$line = trim(fgets($file));
+			//Check first line for headers
+			if(preg_match("/^(\w+\s*)+$/",$line,$matches)){
+				$header = preg_split('/\s+/',$matches[0]);
+			}
+			//Split line into tokens
+			$str = preg_split('/,/', $line);
+
+			//Trim not working
+			/* foreach($str as $value){
+				$value = trim($value); 
+			} */
+
+			//Generating Collections
+			if(!(count($str) < 7)){
+				$arr = array($header[0]=>$str[0],$header[1]=>$str[1],$header[2]=>$str[2],$header[3]=>$str[3],$header[4]=>$str[4],$header[5]=>$str[5],$header[6]=>$str[6]);
+				array_push($array,$arr);
+			}
+		}
+		fclose($file);
+		return $array;
 	}
 ?>
