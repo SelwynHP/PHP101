@@ -1,8 +1,4 @@
 <?php
-	function multiply($num1,$num2){
-		$result = $num1 * $num2;
-		return $result;
-	}
 	function parse_data($data){
 		$data = trim($data);
 		$data = stripslashes($data);
@@ -37,12 +33,16 @@
 
 			//Trim() data
 			/* foreach($str as $value){
-				$value = trim($value); 
+				$value = parse_data($value); 
 			} */
 
 			//Generating Collections
-			if(count($str) == 7){
-				$arr = array($header[0]=>$str[0],$header[1]=>$str[1],$header[2]=>$str[2],$header[3]=>$str[3],$header[4]=>$str[4],$header[5]=>$str[5],$header[6]=>$str[6]);
+			$headerCount = count($header);
+			if(count($str) == $headerCount){
+				$arr = array();
+				for($i = 0;$i < $headerCount; $i++){
+					$arr[$header[$i]] = $str[$i];
+				}
 				array_push($array,$arr);
 			}
 		}
