@@ -17,8 +17,8 @@
 	}
 	function array_auto_init(){
 		$array = array();
-		$filePath = "C:/xampp/htdocs/Test/images/cars.txt"; //Windows Version
-		//$filePath = "/opt/lampp/htdocs/Test/images/cars.txt"; //Linux Version
+		//$filePath = "C:/xampp/htdocs/PHP101/Lab5_Practice1/images/cars.txt"; //Windows Version
+		$filePath = "/opt/lampp/htdocs/PHP101/Lab5_Practice1/images/cars.txt"; //Linux Version
 
 		//==============Parsing File==============
 		$file = fopen($filePath,"r");
@@ -51,7 +51,7 @@
 		return $array;
 	}
 	function display($asArray){
-		$DirPath = "C:/xampp/htdocs/Test/images/";
+		$DirPath = "C:/xampp/htdocs/PHP101/Lab5_Practice1/images/";
 
 		for($i = 0;$i < count($asArray);$i++){
 			$filePath = "images/".$asArray[$i]["Image"];
