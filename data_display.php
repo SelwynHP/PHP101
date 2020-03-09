@@ -32,8 +32,9 @@
 			$str = preg_split('/,/', $line);
 
 			//Trim() data
+			$str = array_map('trim',$str);
 			/* foreach($str as $value){
-				$value = parse_data($value); 
+				$value = trim($value); 
 			} */
 
 			//Generating Collections
@@ -48,5 +49,40 @@
 		}
 		fclose($file);
 		return $array;
+	}
+	function display($asArray){
+		$DirPath = "C:/xampp/htdocs/Test/images/";
+
+		for($i = 0;$i < count($asArray);$i++){
+			$filePath = "images/".$asArray[$i]["Image"];
+
+			$str = sprintf('
+				<div style="width:526px;height:200px">
+					<div style="width:250px;float:left">
+						<img src="%s" style="height:200px;width:200px;">			<!--arg1-->
+					</div>
+					<div style="width:250px;float:right">
+						<p>
+							<font color=red size="4">
+								%s,%s %s,%s											<!--arg2345-->
+							</font>
+							<br/><br/><br/>
+							%s														<!--arg6-->
+							<br/>
+							%s KM													<!--arg7-->
+						</p>
+					</div>
+				</div>
+			',
+			$filePath,
+			$asArray[$i]["Year"],
+			$asArray[$i]["Make"],
+			$asArray[$i]["Model"],
+			$asArray[$i]["Color"],
+			$asArray[$i]["Price"],
+			$asArray[$i]["KM"]
+		);
+			echo $str;
+		}
 	}
 ?>

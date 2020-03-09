@@ -14,23 +14,12 @@
 							<?php include('data_display.php')?>
 							<?php
 								if(isset($_POST['submit'])){
-									$cars = array_man_init();
-									$lenght = count($cars);
-									/*for($i = 0; $i < $lenght; $i++){
-										echo implode(", " ,$cars[$i]);
-										echo "<br/>";
-									}*/
-
 									$main = array_auto_init();
-									$mainCount = count($main);
-									for($i = 0; $i < $mainCount; $i++){
-										echo implode(" ",$main[$i]);
-										echo "<br/>";
-									}
+									display($main);
 								}
 							?>
 							<form  action="#" method="POST">
-								<input type="submit" name="submit" value="Submit">
+								<input type="submit" name="submit" value="View Inventory">
 							</form>
 						<br />
 					</div>

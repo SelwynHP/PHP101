@@ -98,3 +98,9 @@ body {
 .smallredtext a:hover{
 	text-decoration:underline;
 }
+/*display() formatting*/
+.bodytext div{
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 20px;
+}
